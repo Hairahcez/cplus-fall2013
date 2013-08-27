@@ -1,5 +1,13 @@
-﻿Build started 8/27/2013 9:14:27 AM.
+﻿Build started 8/27/2013 9:39:36 AM.
+     1>Project "C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\HelloWorld!\HelloWorld!.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\Debug\HelloWorld!.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\Debug\HelloWorld!.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\Debug\HelloWorld!.lib" /MACHINE:X86 Debug\Main.obj
+         HelloWorld!.vcxproj -> C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\Debug\HelloWorld!.exe
+     1>Done Building Project "C:\Users\200156262\Desktop\cplus-fall2013\slnHelloWorld!\HelloWorld!\HelloWorld!.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.24
+Time Elapsed 00:00:00.80
