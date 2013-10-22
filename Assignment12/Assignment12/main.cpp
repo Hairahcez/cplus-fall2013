@@ -25,6 +25,7 @@ int main()
 		cout << "1.Addition" << endl << "2.Multiplication" << endl << "3.Subtraction" << endl << "4.Division" << endl;
 		string option;
 		cin >> option;
+		// Set the amount of decimal places
 		cout << fixed << setprecision(3);
 		// Give an escape option
 		if (option == "q" || option == "Q")
