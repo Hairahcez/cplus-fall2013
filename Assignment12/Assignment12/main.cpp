@@ -50,7 +50,7 @@ int main()
 						break;
 					case 2:
 						// Multiplication
-						answer = number_one * number_two;
+						answer = h.mult(number_one, number_two);
 						cout << "The two numbers multiplied together is: " << answer << endl;
 						break;
 					case 3:

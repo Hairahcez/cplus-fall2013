@@ -5,7 +5,14 @@ Helper::Helper()
 	// nothing to do here
 }
 
+double Helper::mult(double first_num, double second_num)
+{
+	double answer = 0;
 
+	answer = first_num * second_num;
+
+	return answer;
+}
 double Helper::ConvertToDouble(string s)
 {
   //holds running total

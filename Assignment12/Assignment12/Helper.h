@@ -15,6 +15,7 @@ class Helper
 		bool IsNumericInt(string);
 		int ConvertToInt(string);
 		double ConvertToDouble(string);
+		double mult(double,double);
 
 
 
