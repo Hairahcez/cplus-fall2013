@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <string>
+#include <iomanip>
 using namespace std; 
 void main () 
 { 
@@ -11,9 +12,12 @@ void main ()
 	double average;
 	bool keeplooping = true;
 	string option;
+	// Set the precision to one decimal place
+	cout << fixed << setprecision(1);
 	// Loop while condition is true
 	while(keeplooping)
 	{
+
 		// Ask for input
 	cout << "Enter a number: ";
 	cin >> first_num;
