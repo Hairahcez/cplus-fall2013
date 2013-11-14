@@ -29,6 +29,7 @@ protected:
 public:
 	enum Colors {RED, GREEN, BLUE, YELLOW, WHITE, MAGENTA, CYAN};
 	
+
 	Quad();
 	Quad(GLfloat, GLfloat, GLfloat, Colors);
 	void Draw();

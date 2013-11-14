@@ -35,6 +35,10 @@ void draw();
 void keyboard(unsigned char, int, int);
 
 
+
+
+
+
 //position of light
 static GLfloat light_one[] = {0.5,    0.0, 30.0, 5.0};
 // position of viewer 
@@ -47,12 +51,11 @@ Quad q2(0.25f + x_inc, 0.33f, 1, Quad::BLUE);
 //Cube c2(3,4,10, Quad::RED);
 
 Cube cubes[64];
-Quad* quads[4];
-enum colors {RED, GREEN, BLUE, YELLOW, WHITE, MAGENTA, CYAN};
-string colors1[] = {"RED", "GREEN", "BLUE", "YELLOW", "WHITE", "MAGENTA", "CYAN"};
+//Quad* quads[4];
+
 void draw()
 {
-
+	
 	for (int i=0; i<64;i++)
 	{
 		//Cube* temp_cube = (Cube*) quads[i];
@@ -61,7 +64,8 @@ void draw()
 		//temp_cube->move();
 		//temp_cube->Draw();
 	}
-
+	
+	
 	//c.move();
 	//c.Draw();
 
@@ -162,6 +166,7 @@ void init()
    glClearColor(0.0, 0.0, 0.0, 1.0);
    glShadeModel(GL_SMOOTH);
    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+   
    int county = 0;
    int countx = 0;
    int countz = 0;
@@ -174,10 +179,12 @@ void init()
 		for(int x=0;x<4;x++)
 		{
 		   county=0;
+		   
 		   for(int y=0;y<4;y++)
 		   {
 			   //colors = colors1[y];
-			   cubes[i] = Cube(countx,county,countz,2 ,Quad::CYAN);
+			   cubes[i] = Cube(countx,county,countz,2 , (Quad::Colors) (y % 7));
+
 			   county+=2;
 			   
 			   i++;
@@ -189,16 +196,7 @@ void init()
    }
    
    
-   /*
-   quads[0] = new Cube(1,0,2,Quad::RED);
-   quads[1] = new Cube(1,2,2,Quad::YELLOW);
-   quads[2] = new Cube(1,4,2,Quad::BLUE);
-   quads[3] = new Quad(1, 6, 2, Quad::CYAN);
-
-   cout << "Completed Initialization" << endl;
-   cout << "Type of [0]:" << typeid(*quads[0]).name() << endl;
-   cout << "Type of [3]:" << typeid(*quads[3]).name() << endl;
-   */
+   
       /* GL_FILL, GL_LINE to show wireframe */
    glEnable(GL_DEPTH_TEST);
    glEnable(GL_LIGHTING);

@@ -11,9 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{10C7CD3D-B1DF-430D-A4DC-2F1C959F6F82}</ProjectGuid>
-    <RootNamespace>OpenGL</RootNamespace>
-    <ProjectName>2dArrays</ProjectName>
+    <ProjectGuid>{BB7D120D-25A5-45A5-82E4-D6971C6823B5}</ProjectGuid>
+    <RootNamespace>Assignment14</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -65,7 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main1.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
