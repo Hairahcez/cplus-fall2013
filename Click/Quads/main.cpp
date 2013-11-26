@@ -12,7 +12,8 @@
 #include "Ghost.h"
 #include "Cube.h"
 #include "string"
-
+#include "Collection.h"
+GLfloat offset = 0;
 using namespace std;
 
 /* GLfloat arrays to specify colors */ 
@@ -50,12 +51,13 @@ Quad q2(0.25f + x_inc, 0.33f, 1, Quad::BLUE);
 //Cube c(0,0,10, Quad::RED);
 //Cube c2(3,4,10, Quad::RED);
 
-Cube cubes[64];
+//Cube cubes[64];
 //Quad* quads[4];
+Collection<Cube> cubes(0);
 
 void draw()
 {
-	
+	/*
 	for (int i=0; i<64;i++)
 	{
 		//Cube* temp_cube = (Cube*) quads[i];
@@ -64,8 +66,14 @@ void draw()
 		//temp_cube->move();
 		//temp_cube->Draw();
 	}
-	
-	
+	*/
+	for (int i=0; i<cubes.length();i++)
+	{
+		
+		cubes[i].move();
+		cubes[i].Draw();
+		
+	}
 	//c.move();
 	//c.Draw();
 
@@ -103,6 +111,15 @@ void display()
 void keyboard(unsigned char key, int x, int y)
 {
    //user interaction here
+	if (key == 'o')
+	{
+		Cube c(3, 4, 0, 10, Quad::CYAN);
+		cubes.add(c);
+	}
+	if (key == 'p')
+	{
+		offset = offset + .01;
+	}
 	if (key == 'k')
 	{
 		g.set_rotation(1);
@@ -166,7 +183,23 @@ void init()
    glClearColor(0.0, 0.0, 0.0, 1.0);
    glShadeModel(GL_SMOOTH);
    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+   int x = 0;
+   int y = 0;
+   int z = 0;
+
+   for (int x=0; x<20;x+=5)
+   {
+	   for(int y=0; y<6;y+=2)
+	   {
+		   Cube c2(x,y,z,1,Quad::BLUE);
+		   Cube c(x,y,z,2,Quad::CYAN);
+			cubes.add(c);
+			cubes.add(c2);
+	   }
+   }
+
    
+   /*
    int county = 0;
    int countx = 0;
    int countz = 0;
@@ -183,8 +216,8 @@ void init()
 		   for(int y=0;y<4;y++)
 		   {
 			   //colors = colors1[y];
-			   cubes[i] = Cube(countx,county,countz,2 , (Quad::Colors) (y % 7));
-
+			   Cube c(countx,county,countz,2 , (Quad::Colors) (y % 7));
+			   cubes.add(c);
 			   county+=2;
 			   
 			   i++;
@@ -194,7 +227,7 @@ void init()
 		}
 		countz+=2;
    }
-   
+   */
    
    
       /* GL_FILL, GL_LINE to show wireframe */
@@ -206,7 +239,21 @@ void init()
 
 }
 
+void mouse(int button, int state, int x, int y)
+{
+	if (state == GLUT_UP)
+	{
+	GLfloat modifier = 55.0f;
 
+	GLfloat x_pos = (x /1280.0f) * modifier;
+	GLfloat y_pos = (y / 700.0f) * modifier * -1;
+
+	cout << "x:" << x << " y:" << y << endl;
+
+	Cube c(x, y, 0, 10, Quad::CYAN);
+		cubes.add(c);
+	}
+}
 
 int main(int argc, char** argv)
 {
@@ -219,6 +266,7 @@ int main(int argc, char** argv)
    glutDisplayFunc(display); 
    glutReshapeFunc(reshape); 
    glutKeyboardFunc(keyboard);
+   glutMouseFunc(mouse);
    glutMainLoop();
    return 0;
 }

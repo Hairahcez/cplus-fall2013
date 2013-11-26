@@ -66,6 +66,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Collection.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="Quad.h" />
