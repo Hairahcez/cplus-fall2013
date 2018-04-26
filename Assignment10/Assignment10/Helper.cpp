@@ -5,7 +5,7 @@ Helper::Helper()
 	// nothing to do here
 }
 
-
+// Converts to double
 double Helper::ConvertToDouble(string s)
 {
   //holds running total
