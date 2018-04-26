@@ -7,6 +7,7 @@ class Helper
 {
 	private:
 		//nothing to see here
+	// The test worked
 	public:
 
 		Helper();
