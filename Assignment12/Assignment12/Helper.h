@@ -6,7 +6,7 @@ using namespace std;
 class Helper
 {
 	private:
-		//nothing here
+		//nothing to see here
 	public:
 
 		Helper();
