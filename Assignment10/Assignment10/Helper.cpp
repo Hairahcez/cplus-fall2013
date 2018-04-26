@@ -3,6 +3,7 @@
 Helper::Helper()
 {
 	// nothing to do here
+	// Nothing to see here
 }
 
 // Converts to double
